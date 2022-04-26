@@ -30,5 +30,10 @@ public class PlayerController : MonoBehaviour
         {
             rigidbody.AddForce(new Vector3(1, 0, 0) * power);
         }
+
+        //if (Input.GetKey(KeyCode.R))
+        //{
+        //    rigidbody.position = CheckPoint; //???
+        //}
     }
 }
