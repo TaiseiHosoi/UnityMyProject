@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class VSTest2 : MonoBehaviour
+
+public class StartManagerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,4 +17,9 @@ public class VSTest2 : MonoBehaviour
     {
         
     }
+    public void ChangeScene(string nextScene)
+    {
+        SceneManager.LoadScene(nextScene);
+    }
+
 }
