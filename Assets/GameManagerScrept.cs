@@ -5,20 +5,26 @@ using UnityEngine.SceneManagement;  //シーンマネジメントを追加せなあかん。
 
 public class GameManagerScrept : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void SceneReset()
     {
         string activeSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(activeSceneName);
     }
+    public void ChangeReset(string nextScene)
+    {
+
+        SceneManager.LoadScene(nextScene);
+    }
+
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+        Screen.SetResolution(1920, 1080, false);
+        
+
+    }
+
+    
+
 }
